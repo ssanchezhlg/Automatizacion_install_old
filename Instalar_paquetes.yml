@@ -1,4 +1,4 @@
 ---
 - name: Instalacion de Paquetes Proxy Inverso
-  hosts: Server_ProxyInverso
+  hosts: Server_ProxyInversoInstall
   become: yes
