@@ -3,7 +3,7 @@
   hosts: Server_ProxyInversoInstall
   become: yes
 
-    tasks:
+  tasks:
     - name: Actualizar caché de paquetes
       apt:
         update_cache: yes
