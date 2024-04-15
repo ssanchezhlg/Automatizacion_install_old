@@ -1,6 +1,10 @@
 ---
-    - name: Modificar sources.list
+    - name: Replace default sources.list with a custom one
       template:
         src: plantillas/sources-debian-12.list.j2
         dest: /etc/apt/sources.list
+        owner: root
+        group: root
+        mode: '0644'
+        backup: yes        
       notify: Actualizar caché de paquetes

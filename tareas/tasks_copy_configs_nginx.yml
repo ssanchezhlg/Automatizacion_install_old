@@ -1,0 +1,6 @@
+---
+
+- name: Copiar contenido de la carpeta sites-available al servidor Ngnix1
+  copy:
+    src: nginx/
+    dest: /etc/nginx/
