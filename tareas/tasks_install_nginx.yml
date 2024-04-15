@@ -4,3 +4,4 @@
     name: "{{ required_packages['nginx'] }}"
     update_cache: "{{ apt_get_update_cache|bool }}"
     state: latest
+
