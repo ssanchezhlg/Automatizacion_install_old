@@ -1,0 +1,8 @@
+---
+- name: Actualizar caché de paquetes
+  apt:
+    update_cache: yes
+
+- name: Realizar actualización de paquetes
+  apt:
+    upgrade: yes
