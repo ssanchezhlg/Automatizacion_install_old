@@ -10,3 +10,5 @@
     - name: Incluir tareas de actualización y actualización de paquetes
       include_tasks: tareas/tasks_update-upgrade.yml
 
+    - name: Incluir tareas de instalación de Nginx
+      include_tasks: tareas/tasks_install_nginx.yml
