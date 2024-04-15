@@ -1,6 +1,6 @@
 ---
 - name: Instalar paquetes y actualizar
-  hosts: tu_grupo_de_servidores
+  hosts: Server_ProxyInversoInstall
   become: yes
 
   tasks:
