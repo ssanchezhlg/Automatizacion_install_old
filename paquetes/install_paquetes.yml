@@ -1,0 +1,6 @@
+apt_get_update_cache: True
+
+required_packages:
+  nginx:
+    - nginx
+
