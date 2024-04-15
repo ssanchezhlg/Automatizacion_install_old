@@ -1,10 +1,18 @@
 ---
-    - name: Replace default sources.list with a custom one
-      template:
-        src: plantillas/sources-debian-12.list.j2
-        dest: /etc/apt/sources.list
-        owner: root
-        group: root
-        mode: '0644'
-        backup: yes        
-      when: repo.source == "local"
+tasks:
+  - name: Obtener la información del archivo sources.list
+    stat:
+      path: /etc/apt/sources.list
+    register: sources_list_status
+
+  - name: Obtener la información del archivo de plantilla
+    stat:
+      path: plantillas/sources-debian-12.list.j2
+    register: template_status
+
+  - name: Reemplazar sources.list con uno personalizado si el contenido es diferente
+    blockinfile:
+      path: /etc/apt/sources.list
+      backup: yes
+      block: "{{ lookup('file', 'plantillas/sources-debian-12.list.j2') }}"
+    when: sources_list_status.stat.exists and template_status.stat.exists and lookup('file', 'plantillas/sources-debian-12.list.j2') != lookup('file', '/etc/apt/sources.list')
