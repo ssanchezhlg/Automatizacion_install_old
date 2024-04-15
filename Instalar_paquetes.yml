@@ -2,3 +2,14 @@
 - name: Instalacion de Paquetes Proxy Inverso
   hosts: Server_ProxyInversoInstall
   become: yes
+
+    tasks:
+    - name: Actualizar caché de paquetes
+      apt:
+        update_cache: yes
+
+    - name: Modificar sources.list
+      template:
+        src: sources-debian-12.list.j2
+        dest: /etc/apt/sources.list
+      notify: Actualizar caché de paquetes
