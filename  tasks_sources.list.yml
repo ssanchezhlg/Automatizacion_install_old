@@ -1,0 +1,6 @@
+---
+    - name: Modificar sources.list
+      template:
+        src: sources-debian-12.list.j2
+        dest: /etc/apt/sources.list
+      notify: Actualizar caché de paquetes
