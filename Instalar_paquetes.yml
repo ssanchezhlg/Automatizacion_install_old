@@ -4,8 +4,8 @@
   become: yes
 
   vars_files:
-    - paquetes/variables.yml
-    
+    - paquetes/install_paquetes.yml
+
   tasks:
     - name: Incluir tareas de modificación de sources.list
       include_tasks: tareas/tasks_sources.list.yml
