@@ -1,8 +1,12 @@
 ---
-- name: Instalacion de Paquetes Proxy Inverso
-  hosts: Server_ProxyInversoInstall
+- name: Instalar paquetes y actualizar
+  hosts: tu_grupo_de_servidores
   become: yes
 
-  tareas:
-    - tasks_sources.list
-    - tasks_update-upgrade
+  tasks:
+    - name: Incluir tareas de modificación de sources.list
+      include_tasks: tareas/tasks_sources.list.yml
+
+    - name: Incluir tareas de actualización y actualización de paquetes
+      include_tasks: tareas/tasks_update-upgrade.yml
+
