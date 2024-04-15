@@ -4,10 +4,6 @@
   become: yes
 
   tasks:
-    - name: Actualizar caché de paquetes
-      apt:
-        update_cache: yes
-
     - name: Modificar sources.list
       template:
         src: sources-debian-12.list.j2
