@@ -1,4 +1,18 @@
 ---
+- name: Instalar Servicios {{ fileserver.packages }}
+  apt:
+    name: "{{ item }}"
+    state: present  # Cambiado a 'present' para verificar si está instalado
+  loop: "{{ fileserver.packages }}"
+  register: package_installation_status
+
+- name: Verificar estado del servicio {{ fileserver.services }}
+  systemd:
+    name: "{{ item }}"
+    enabled: yes
+    state: started
+  loop: "{{ fileserver.services }}"
+  when: not package_installation_status.results | map(attribute='failed') | list
 
 
 
