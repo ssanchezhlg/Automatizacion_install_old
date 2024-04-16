@@ -14,6 +14,8 @@
 #    - name: Incluir tareas para actualizar y upgradear de paquetes               ## Tareas OK fase 2
 #      include_tasks: tareas/tasks_update-upgrade.yml
 
-    - name: Incluir tareas de instalación de packages
-      include_tasks: tareas/tasks_install_packages.yml
+#    - name: Incluir tareas de instalación de packages                            ## Tarea OK
+#      include_tasks: tareas/tasks_install_packages.yml
 
+    - name: Incluir tareas de copia de configuraciones
+      include_tasks: tareas/tasks_copy_configs.yml
