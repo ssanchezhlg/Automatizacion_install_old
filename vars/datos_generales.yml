@@ -16,7 +16,7 @@ repo:
 apt_get_update_cache: True
 
 # Upgradea el sistema solo se ejecute si la variable esta en True
-apt_get_upgrade_cache: false
+apt_get_upgrade_cache: True
 
 
 # file server details
