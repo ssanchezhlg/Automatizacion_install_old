@@ -1,7 +1,9 @@
 ---
 - name: Actualizar caché de paquetes
-  apt:
-    update_cache: yes
+      apt:
+        update_cache: yes
+        force_apt_get: yes
+        cache_valid_time: 1800
 
 - name: Realizar actualización de paquetes
   apt:
