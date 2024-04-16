@@ -5,7 +5,7 @@
 # Domain general data
 # Alternate local repositories
 repo:
-  proto: http
+  proto: https
   host: repos.uclv.edu.cu
   root: debian
   root-sec: debian-security
