@@ -1,18 +1,29 @@
 ---
-- name: Instalar Nginx
+- name: Instalar Servicios {{ fileserver.packages }}
   apt:
-    name: "{{ required_packages['nginx'] }}"
-    update_cache: "{{ apt_get_update_cache }}"
+    name: "{{ fileserver.packages }}"
     state: latest
 
-- name: Verificar estado del servicio Nginx
+- name: Verificar estado del servicio {{ fileserver.services }}
   systemd:
-    name: nginx
-    state: started
+    name: "{{ item }}"
     enabled: yes
-  register: nginx_service_status
+    state: started
+  loop: "{{ fileserver.services }}"
 
-- name: Mostrar estado del servicio Nginx
-  debug:
-    msg: "El servicio Nginx está {{ nginx_service_status.state }}"
-  when: nginx_service_status.changed
+    
+
+
+#  register: nginx_service_status
+
+#- name: Verificar estado del servicio Nginx
+#  systemd:
+#    name: nginx
+#    state: started
+#    enabled: yes
+#  register: nginx_service_status
+
+#- name: Mostrar estado del servicio Nginx
+#  debug:
+#    msg: "El servicio Nginx está {{ nginx_service_status.state }}"
+#  when: nginx_service_status.changed

@@ -22,16 +22,13 @@ apt_get_upgrade_cache: True
 # file server details
 fileserver:
   packages:
-    - samba
-    - krb5-user
-    - winbind
-    - libnss-winbind
-    - libpam-winbind
-    - resolvconf
+    - nginx
+    - bind9
+    - dns-utils
   services:
-    - nmbd
-    - smbd
-    - winbind
+    - nginx
+    - named
+
 
 
 
