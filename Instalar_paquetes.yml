@@ -5,6 +5,7 @@
 
   vars_files:
     - paquetes/install_paquetes.yml
+    - vars/datos_generales.yml
 
   tasks:
     - name: Incluir tareas de modificación de sources.list
