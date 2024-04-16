@@ -8,6 +8,7 @@ repo:
   proto: http
   host: repos.uclv.edu.cu
   root: debian
+  root-sec: debian-security
   flavors: bookworm
   source: local # local if on your network, anything else to use the default ones.
 
