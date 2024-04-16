@@ -22,10 +22,12 @@ apt_get_upgrade_cache: True
 # file server details
 fileserver:
   packages:
+    - rsyslog
     - nginx
     - bind9
     - dnsutils
   services:
+    - rsyslog
     - nginx
     - named
 
