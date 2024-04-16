@@ -2,7 +2,7 @@
 
 ## Cómo usarlo:
 
-1. Modifique el fichero ```yaml datos_generales.yml` que se encuentra en el directorio ```yaml vars`.
+1. Modifique el fichero `datos_generales.yml` que se encuentra en el directorio `vars`.
 
 ### Variables a usar
 
