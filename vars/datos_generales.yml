@@ -1,0 +1,34 @@
+# Domain wide parameters
+# needs to include secrets.yml
+
+---
+# Domain general data
+# Alternate local repositories
+repo:
+  proto: http
+  host: repos.uclv.edu.cu
+  root: debian
+  flavors: bookworm
+  source: local # local if on your network, anything else to use the default ones.
+
+# file server details
+fileserver:
+  packages:
+    - samba
+    - krb5-user
+    - winbind
+    - libnss-winbind
+    - libpam-winbind
+    - resolvconf
+  services:
+    - nmbd
+    - smbd
+    - winbind
+
+
+
+# Proxy settings, not used yet.
+proxy:
+  user_parent: True
+  host: proxy.co7wt.cu
+  port: 3128
