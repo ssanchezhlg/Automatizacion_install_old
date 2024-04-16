@@ -1,6 +1,6 @@
 ---
 
-- name: Copiar contenido de la carpeta sites-available al servidor Ngnix1
+- name: Copiar contenido de los servicios o el servicio {{ fileservices.services }}
   copy:
     src: plantillas/{{ ansible_distribution }}/debian/{{ fileservices.services }}
-    dest: /etc/nginx/
+    dest: /etc/{{ fileservices.services }}
