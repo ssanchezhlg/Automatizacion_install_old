@@ -31,3 +31,14 @@ apt_get_upgrade_cache: True
 
 ###### Si la variable es False o no está definida, la tarea se omitirá. Esto proporciona un control flexible sobre cuándo se debe realizar la actualización del sistema.
 
+#### Declarar los paquetes a instalar asi, como los servicios a inciar 
+```yaml
+fileserver:
+  packages:
+    - nginx
+    - bind9
+    - dnsutils
+  services:
+    - nginx
+    - named
+```    
