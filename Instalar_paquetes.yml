@@ -14,5 +14,5 @@
 #    - name: Incluir tareas para actualizar y upgradear de paquetes               ## Tareas OK fase 2
 #      include_tasks: tareas/tasks_update-upgrade.yml
 
-    - name: Incluir tareas de instalación de Nginx
-      include_tasks: tareas/tasks_install_nginx.yml
+    - name: Incluir tareas de instalación de packages
+      include_tasks: tareas/tasks_install_packages.yml
