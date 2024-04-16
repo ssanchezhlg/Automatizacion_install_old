@@ -28,3 +28,5 @@ apt_get_update_cache: True
 # Upgrade del sistema solo se ejecuta si la variable está en True
 apt_get_upgrade_cache: True
 ```
+
+Si la variable es False o no está definida, la tarea se omitirá. Esto proporciona un control flexible sobre cuándo se debe realizar la actualización del sistema.
