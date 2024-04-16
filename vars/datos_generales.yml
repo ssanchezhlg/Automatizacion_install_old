@@ -36,6 +36,7 @@ fileservices:
   services:
     - nginx
     - bind
+    - /etc/nginx
 
 
 # Proxy settings, not used yet.
