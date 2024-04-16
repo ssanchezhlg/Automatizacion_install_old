@@ -11,8 +11,8 @@
 #    - name: Incluir tareas de modificación de sources.list                       ## Tareas OK
 #      include_tasks: tareas/tasks_sources.list.yml
 
-    - name: Incluir tareas para actualizar y upgradear de paquetes
-      include_tasks: tareas/tasks_update-upgrade.yml
+#    - name: Incluir tareas para actualizar y upgradear de paquetes               ## Tareas OK
+#      include_tasks: tareas/tasks_update-upgrade.yml
 
 #    - name: Incluir tareas de instalación de Nginx
 #      include_tasks: tareas/tasks_install_nginx.yml
