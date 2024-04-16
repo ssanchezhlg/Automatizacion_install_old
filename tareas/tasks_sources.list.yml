@@ -1,4 +1,9 @@
 ---
+- name: Verificar si el archivo sources.list ha sido modificado
+  stat:
+    path: /etc/apt/sources.list
+  register: sources_list_status
+
 - name: Reemplazar sources.list con uno personalizado si el contenido es diferente
   template:
     src: plantillas/sources/sources.list.j2
@@ -7,4 +12,6 @@
     group: root
     mode: '0644'
     backup: yes
-  when: repo.source == "internet"
+  when: 
+    - repo.source == "internet"
+    - (not sources_list_status.stat.path | regex_search('.*~$'))  # Verifica si el nombre del archivo no termina con "~"
