@@ -8,6 +8,7 @@
 
 #### Declarar los repos a usar Ejemplo:
 
+- `
 repo:
   proto: http
   host: repos.uclv.edu.cu
@@ -15,6 +16,7 @@ repo:
   root-sec: debian-security
   flavors: bookworm
   source: internet  # local if on your network, anything else to use the default ones.
+`
 
 #### Variable para los repos
 
