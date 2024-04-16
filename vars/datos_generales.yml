@@ -35,7 +35,7 @@ fileserver:
 fileservices:
   services:
     - nginx
-    - named
+    - bind
 
 
 # Proxy settings, not used yet.
