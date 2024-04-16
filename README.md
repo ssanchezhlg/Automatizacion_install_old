@@ -20,7 +20,7 @@ source: internet # local if on your network, anything else to use the default on
 
 #### Variable para los repos
 
-```yaml
+```python
 # Instalación de paquetes solo se ejecuta si la variable está en True
 apt_get_update_cache: True
 ```
