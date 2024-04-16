@@ -12,31 +12,3 @@
     enabled: yes
     state: started
   loop: "{{ fileserver.services }}"
-
-
-
-
-
-
-
-
-
-
-
-
-
-#- name: Instalar Servicios {{ fileserver.packages }}
-#  apt:
-#    name: "{{ fileserver.packages }}"
-#    state: latest
-
-#- name: Verificar estado del servicio {{ fileserver.services }}
-#  systemd:
-#    name: "{{ item }}"
-#    enabled: yes
-#    state: started
-#  loop: "{{ fileserver.services }}"
-
-    
-
-
