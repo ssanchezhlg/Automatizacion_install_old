@@ -31,7 +31,11 @@ fileserver:
     - nginx
     - named
 
-
+# file server details
+fileservices:
+  services:
+    - nginx
+    - named
 
 
 # Proxy settings, not used yet.
