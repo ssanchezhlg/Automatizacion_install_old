@@ -9,8 +9,6 @@
 #### Declarar los repos a usar Ejemplo:
 
 ```yaml
-Declarar los repos a usar Ejemplo:
-
 repo:
 proto: http
 host: repos.uclv.edu.cu
