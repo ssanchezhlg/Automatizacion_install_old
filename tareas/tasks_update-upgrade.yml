@@ -11,4 +11,6 @@
       apt:
         upgrade: dist
         force_apt_get: yes
+      when: apt_get_upgrade_cache|bool
+
 
