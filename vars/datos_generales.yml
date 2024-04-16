@@ -24,7 +24,7 @@ fileserver:
   packages:
     - nginx
     - bind9
-    - dns-utils
+    - dnsutils
   services:
     - nginx
     - named
