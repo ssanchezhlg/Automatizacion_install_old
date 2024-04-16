@@ -1,16 +1,16 @@
 ---
-#- name: Actualizar caché de paquetes
-#  apt:
-#    update_cache: "{{ apt_get_update_cache|bool }}"
-#    force_apt_get: yes
-#    cache_valid_time: 1800
+- name: Actualizar caché de paquetes
+  apt:
+    update_cache: "{{ apt_get_update_cache|bool }}"
+    force_apt_get: yes
+    cache_valid_time: 1800
 
-- name: Realizar actualización de paquetes
-  block:
-    - name: Actualizar todo los paquetes
-      apt:
-        upgrade: dist
-        force_apt_get: yes
-      when: apt_get_upgrade_cache|bool
+#- name: Realizar actualización de paquetes
+#  block:
+#    - name: Actualizar todo los paquetes
+#      apt:
+#        upgrade: dist
+#        force_apt_get: yes
+#      when: apt_get_upgrade_cache|bool
 
 
