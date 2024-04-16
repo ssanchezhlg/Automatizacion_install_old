@@ -1,6 +1,6 @@
 ---
-
-- name: Copiar contenido de los servicios o el servicio {{ fileservices.services }}
+- name: Copiar contenido de los servicios {{ fileservices.services }}
   copy:
-    src: plantillas/{{ ansible_distribution }}/debian/{{ fileservices.services }}
-    dest: /etc/{{ fileservices.services }}
+    src: "plantillas/{{ ansible_distribution }}/{{ fileservices.services }}/{{ item }}"
+    dest: "/etc/{{ fileservices.services }}/{{ item }}"
+  loop: "{{ fileservices.services }}"
