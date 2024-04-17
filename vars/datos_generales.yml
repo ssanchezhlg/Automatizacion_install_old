@@ -42,5 +42,5 @@ fileservices:
 # Proxy settings, not used yet.
 proxy:
   user_parent: True
-  host: proxy.co7wt.cu
+  host: proxy.sld.cu
   port: 3128
